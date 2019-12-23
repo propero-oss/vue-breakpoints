@@ -1,12 +1,15 @@
 {
   "name": "@propero/vue-breakpoints",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/VueBreakpoints.cjs.js",
   "module": "dist/VueBreakpoints.esm.js",
   "unpkg": "dist/VueBreakpoints.iife.js",
   "types": "dist/VueBreakpoints.d.ts",
-  "files": ["dist", "LICENSE.md"],
+  "files": [
+    "dist",
+    "LICENSE.md"
+  ],
   "description": "Responsive and reactive breakpoints for Vue.js",
   "author": {
     "name": "Propero Team",
