@@ -1,0 +1,70 @@
+{
+  "name": "@propero/vue-breakpoints",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/VueBreakpoints.cjs.js",
+  "module": "dist/VueBreakpoints.esm.js",
+  "unpkg": "dist/VueBreakpoints.iife.js",
+  "types": "dist/VueBreakpoints.esm.d.ts",
+  "files": ["dist", "LICENSE.md"],
+  "description": "Responsive and reactive breakpoints for Vue.js",
+  "author": {
+    "name": "Propero Team",
+    "email": "team@propero.dev"
+  },
+  "contributors": [
+    {
+      "name": "Merlin Reichwald",
+      "email": "merlin.reichwald@gmail.com"
+    }
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "npm run build:umd & npm run build:cjs & npm run build:esm & npm run build:unpkg",
+    "build:umd": "rollup --config rollup.config.js --format umd --file dist/VueBreakpoints.umd.js",
+    "build:cjs": "rollup --config rollup.config.js --format cjs --file dist/VueBreakpoints.cjs.js",
+    "build:esm": "rollup --config rollup.config.js --format esm --file dist/VueBreakpoints.esm.js",
+    "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/VueBreakpoints.iife.js",
+    "test:unit": "vue-cli-service test:unit",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.3.0",
+    "@propero/vue-extra-decorators": "^1.2.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-typescript": "^4.1.0",
+    "@vue/cli-plugin-unit-jest": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vue/eslint-config-typescript": "^4.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "@wessberg/rollup-plugin-ts": "^1.1.83",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "lint-staged": "^9.4.3",
+    "prettier": "^1.19.1",
+    "rollup": "^1.27.14",
+    "rollup-cli": "^1.0.9",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-vue": "^5.1.4",
+    "typescript": "~3.5.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue,ts}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
