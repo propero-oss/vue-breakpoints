@@ -1,8 +1,7 @@
 import sourcemaps from "rollup-plugin-sourcemaps";
 import commonjs from "rollup-plugin-commonjs";
 import ts from "@wessberg/rollup-plugin-ts";
-import buble from "rollup-plugin-buble";
-const vueConfig = require("./vue.config");
+const vueConfig = require("../vue.config");
 
 export default {
   input: "src/main.ts",
@@ -16,7 +15,6 @@ export default {
   plugins: [
     ts({ tsconfig: "tsconfig-build.json", browserslist: false }),
     sourcemaps(),
-    commonjs(),
-    buble()
+    commonjs()
   ]
 };

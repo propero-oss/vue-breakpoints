@@ -1,5 +1,6 @@
 import { Breakpoints } from "./breakpoints";
 import Vue from "vue";
+export * from "./breakpoints";
 
 export function VueBreakpoints(
   vue: typeof Vue,
@@ -8,10 +9,4 @@ export function VueBreakpoints(
   vue.prototype.$break = new Breakpoints({
     propsData: options
   });
-}
-
-declare module "vue/types/vue" {
-  interface Vue {
-    $break: Breakpoints;
-  }
 }

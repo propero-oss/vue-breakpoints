@@ -5,7 +5,7 @@
   "main": "dist/VueBreakpoints.cjs.js",
   "module": "dist/VueBreakpoints.esm.js",
   "unpkg": "dist/VueBreakpoints.iife.js",
-  "types": "dist/VueBreakpoints.esm.d.ts",
+  "types": "dist/VueBreakpoints.d.ts",
   "files": ["dist", "LICENSE.md"],
   "description": "Responsive and reactive breakpoints for Vue.js",
   "author": {
@@ -20,11 +20,12 @@
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "npm run build:umd & npm run build:cjs & npm run build:esm & npm run build:unpkg",
-    "build:umd": "rollup --config rollup.config.js --format umd --file dist/VueBreakpoints.umd.js",
-    "build:cjs": "rollup --config rollup.config.js --format cjs --file dist/VueBreakpoints.cjs.js",
-    "build:esm": "rollup --config rollup.config.js --format esm --file dist/VueBreakpoints.esm.js",
-    "build:unpkg": "rollup --config rollup.config.js --format iife --file dist/VueBreakpoints.iife.js",
+    "build": "npm run build:umd && npm run build:cjs && npm run build:esm && npm run build:unpkg && npm run build:dts",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/VueBreakpoints.umd.js",
+    "build:cjs": "rollup --config build/rollup.config.js --format cjs --file dist/VueBreakpoints.cjs.js",
+    "build:esm": "rollup --config build/rollup.config.js --format esm --file dist/VueBreakpoints.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/VueBreakpoints.iife.js",
+    "build:dts": "node build/declarations.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
