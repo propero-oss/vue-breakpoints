@@ -1,6 +1,6 @@
 {
   "name": "@propero/vue-breakpoints",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "dist/VueBreakpoints.cjs.js",
   "module": "dist/VueBreakpoints.esm.js",
