@@ -3,7 +3,7 @@ import {
   Component,
   OnWindow,
   SProp
-} from "@propero/vue-extra-decorators";
+} from "@rocketbase/vue-extra-decorators";
 import Vue from "vue";
 import { Watch } from "vue-property-decorator";
 

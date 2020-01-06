@@ -4,7 +4,7 @@ module.exports = {
       "vue": "Vue",
       "vue-class-component": "vueClassComponent",
       "vue-property-decorator": "vuePropertyDecorator",
-      "@propero/vue-extra-decorators": "vueExtraDecorators"
+      "@rocketbase/vue-extra-decorators": "vueExtraDecorators"
     }
   }
 };
