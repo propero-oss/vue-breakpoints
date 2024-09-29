@@ -53,7 +53,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "lint-staged": "^9.4.3",
     "prettier": "^1.19.1",
-    "rollup": "^1.28.0",
+    "rollup": "^2.79.2",
     "rollup-cli": "^1.0.9",
     "rollup-plugin-buble": "^0.19.8",
     "rollup-plugin-commonjs": "^10.1.0",
